@@ -4,6 +4,8 @@ pipeline {
     stages {
         stage('Build base image') {
             steps {
+                sh 'ls'
+                sh 'which make'
                 sh 'make build-base'
             }
         }

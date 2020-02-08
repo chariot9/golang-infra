@@ -2,35 +2,6 @@ package sample
 
 import "testing"
 
-func TestHi(t *testing.T) {
-	type args struct {
-		name string
-	}
-	tests := []struct {
-		name string
-		args args
-		want string
-	}{
-		{
-			name: "Test Hi Carlos",
-			args: args{name: "Carlos"},
-			want: "Hi, Carlos",
-		},
-		{
-			name: "Test Hi Oscar",
-			args: args{name: "Oscar"},
-			want: "Hi, Oscar",
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Hi(tt.args.name); got != tt.want {
-				t.Errorf("Hi() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
 func TestSum(t *testing.T) {
 	type args struct {
 		a int

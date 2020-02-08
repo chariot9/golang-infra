@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build base image') {
             steps {
-                echo 'Building..'
+                sh 'make build-base'
             }
         }
-        stage('Test') {
+        stage('Unit tests') {
             steps {
-                echo 'Testing..'
+                sh 'make unit-test'
             }
         }
-        stage('Deploy') {
+        stage('Build image') {
             steps {
-                echo 'Deploying....'
+                sh 'make build'
             }
         }
     }

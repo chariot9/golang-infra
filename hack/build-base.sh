@@ -8,4 +8,4 @@ GOLANG_TAG=1.9.2-alpine
 BUILD_BASE_ARGS=--build-arg APP_NAME=${APP_NAME} --build-arg GOLANG_TAG=${GOLANG_TAG}
 
 echo "Building base image"
-echo ${BASE_TAG}
+docker build --rm -f build/base/Dockerfile ${BUILD_BASE_ARGS} -t ${IMAGE_NAME}-base:${BASE_TAG}

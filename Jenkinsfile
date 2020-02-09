@@ -27,5 +27,14 @@ pipeline {
                 sh 'make build-base'
             }
         }
+
+        stage('run tests') {
+          steps {
+            sh 'make build-test'
+            sh 'make test-unit'
+            sh 'ls'
+            junit 'report/report.xml'
+          }
+        }
     }
 }

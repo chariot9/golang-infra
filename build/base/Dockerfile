@@ -1,5 +1,5 @@
 ARG GOLANG_TAG
-FROM golang:${GOLANG_TAG}
+FROM golang:${GOLANG_TAG} as build-env
 
 RUN apk --update add git openssh curl && \
   rm -rf /var/lib/apt/lists/* && \
@@ -7,5 +7,6 @@ RUN apk --update add git openssh curl && \
 
 ARG APP_NAME
 WORKDIR /go/src/${APP_NAME}
+ADD . .
 
-RUN pwd && ls -la && go mod download
+RUN ls -la && go mod download

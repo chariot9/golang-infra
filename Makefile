@@ -27,7 +27,7 @@ publish:
 
 run:
 	@echo "Running dev environment"
-	docker run --rm -it \
+	docker run --rm -t \
 		-p $(PORT):80 \
 		-v `pwd`:/go/src/$(APP_NAME) \
 		-w /go/src/$(APP_NAME) \

@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('run tests') {
+        stage('Unit test') {
           steps {
             sh 'make build-test'
             sh 'make unit-test'
@@ -37,7 +37,7 @@ pipeline {
           }
         }
 
-        stage('build image') {
+        stage('Run') {
           steps {
             sh 'make run PORT=8081'
           }

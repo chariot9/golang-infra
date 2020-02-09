@@ -2,7 +2,7 @@ BASE_TAG=$(shell git rev-parse --short HEAD)
 
 IMAGE_NAME=chariot9/golang-infra
 APP_NAME=golang-infra
-GOLANG_TAG=golang:1.13.7-alpine3.11
+GOLANG_TAG=1.13.7-alpine3.11
 
 BUILD_BASE_ARGS=--build-arg APP_NAME=$(APP_NAME) --build-arg GOLANG_TAG=$(GOLANG_TAG)
 

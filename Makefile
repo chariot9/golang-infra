@@ -6,6 +6,7 @@ GOLANG_TAG=1.13.7-alpine3.11
 
 BUILD_BASE_ARGS=--build-arg APP_NAME=$(APP_NAME) --build-arg GOLANG_TAG=$(GOLANG_TAG)
 BUILD_TEST_ARGS=--build-arg IMAGE_NAME=$(IMAGE_NAME) --build-arg BASE_TAG=$(BASE_TAG)
+BUILD_ARGS=--build-arg IMAGE_NAME=$(IMAGE_NAME) --build-arg APP_NAME=$(APP_NAME) --build-arg BASE_TAG=$(BASE_TAG)
 
 build-base:
 	@echo "Building base image"
@@ -21,6 +22,7 @@ unit-test:
 
 build:
 	@echo "Building image"
+	docker build --rm -f build/pro/Dockerfile $(BUILD_ARGS) -t $(IMAGE_NAME):$(BASE_TAG) .
 
 publish:
 	@echo "building publish image"

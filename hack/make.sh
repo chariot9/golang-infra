@@ -2,4 +2,4 @@
 
 echo "Running make file"
 
-bash build-base.sh
+bash hack/build-base.sh

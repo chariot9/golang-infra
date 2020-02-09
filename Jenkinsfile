@@ -36,5 +36,11 @@ pipeline {
             junit 'report/report.xml'
           }
         }
+
+        stage('build image') {
+          steps {
+            sh 'make run PORT=8081'
+          }
+        }
     }
 }

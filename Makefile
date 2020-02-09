@@ -26,4 +26,9 @@ publish:
 	@echo "building publish image"
 
 run:
-	@echo "Running"
+	@echo "Running dev environment"
+	docker run --rm -it \
+		-p $(PORT):80 \
+		-v `pwd`:/go/src/$(APP_NAME) \
+		-w /go/src/$(APP_NAME) \
+		golang:$(GOLANG_TAG) go run app/cmd/main.go

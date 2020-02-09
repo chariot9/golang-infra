@@ -9,4 +9,4 @@ ARG APP_NAME
 WORKDIR /go/src/${APP_NAME}
 ADD . ./app
 
-RUN ls -la && go mod download
+RUN cd app && ls -la && go mod download

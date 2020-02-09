@@ -5,7 +5,7 @@ IMAGE_NAME=chariot9/golang-infra
 APP_NAME=golang-infra
 GOLANG_TAG=1.9.2-alpine
 
-BUILD_BASE_ARGS=--build-arg APP_NAME=${APP_NAME} --build-arg GOLANG_TAG=${GOLANG_TAG}
+BUILD_BASE_ARGS="--build-arg APP_NAME=${APP_NAME} --build-arg GOLANG_TAG=${GOLANG_TAG}"
 
 echo "Building base image"
 docker build --rm -f build/base/Dockerfile ${BUILD_BASE_ARGS} -t ${IMAGE_NAME}-base:${BASE_TAG}

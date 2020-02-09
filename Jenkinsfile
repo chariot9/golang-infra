@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build base image') {
             steps {
-                sh 'bash hack/make.sh'
+                sh 'make build-base'
             }
         }
     }

@@ -37,9 +37,9 @@ pipeline {
           }
         }
 
-        stage('Run') {
+        stage('build image') {
           steps {
-            sh 'make run PORT=8081'
+            sh 'make build'
           }
         }
     }

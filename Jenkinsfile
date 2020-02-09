@@ -31,7 +31,7 @@ pipeline {
         stage('run tests') {
           steps {
             sh 'make build-test'
-            sh 'make test-unit'
+            sh 'make unit-test'
             sh 'ls'
             junit 'report/report.xml'
           }

@@ -42,11 +42,5 @@ pipeline {
             sh 'make release'
           }
         }
-
-        stage('Release') {
-          steps {
-            sh 'nohup make run PORT=8081 &'
-          }
-        }
     }
 }

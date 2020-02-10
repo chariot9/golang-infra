@@ -30,4 +30,17 @@ $ make run PORT=8081
 
 ### Friendly UI by Jenkins, Slack
 
+- **Pipelines** 
 ![alt text](../master/docs/img/jenkins_blue_ocean.png)
+
+
+- **Build states view** 
+![alt text](../master/docs/img/jenkins_stage_view.png)
+
+
+- **Jenkins wiht test result** 
+![alt text](../master/docs/img/jenkins_test_result.png)
+
+
+- **Slack in integration** 
+![alt text](../master/docs/img/slack_notification.png)

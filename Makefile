@@ -30,7 +30,7 @@ publish:
 run:
 	@echo "Running dev environment"
 	docker run --rm -t \
-		-p 8080:8080 \
+		-p ${PORT}:8080 \
 		-v `pwd`:/go/src/$(APP_NAME) \
 		-w /go/src/$(APP_NAME) \
 		golang:$(GOLANG_TAG) go run app/cmd/main.go

@@ -37,9 +37,15 @@ pipeline {
           }
         }
 
-        stage('build image') {
+        stage('Build image') {
           steps {
             sh 'make release'
+          }
+        }
+
+        stage('Release') {
+          steps {
+            sh 'nohup make run PORT=8081 &'
           }
         }
     }

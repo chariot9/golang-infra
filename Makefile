@@ -20,7 +20,7 @@ unit-test:
 	@echo "Running unit tests"
 	docker run --rm -i -v $(shell pwd)/report:/go/src/${APP_NAME}/report $(IMAGE_NAME)-test:$(BASE_TAG)
 
-build:
+release:
 	@echo "Building image"
 	docker build --rm -f build/pro/Dockerfile $(BUILD_ARGS) -t $(IMAGE_NAME):$(BASE_TAG) .
 
@@ -30,7 +30,7 @@ publish:
 run:
 	@echo "Running dev environment"
 	docker run --rm -t \
-		-p $(PORT):80 \
+		-p 8080:8080 \
 		-v `pwd`:/go/src/$(APP_NAME) \
 		-w /go/src/$(APP_NAME) \
 		golang:$(GOLANG_TAG) go run app/cmd/main.go

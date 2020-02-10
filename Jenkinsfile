@@ -39,7 +39,7 @@ pipeline {
 
         stage('build image') {
           steps {
-            sh 'make build'
+            sh 'make release'
           }
         }
     }

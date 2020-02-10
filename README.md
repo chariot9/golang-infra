@@ -30,4 +30,4 @@ $ make run PORT=8081
 
 ### Friendly UI by Jenkins, Slack
 
-![alt text](https://raw.githubusercontent.com/chariot9/golang-infra/master/docs/img/jenkins_blue_ocean.png)
+![alt text](../master/docs/img/jenkins_blue_ocean.png)

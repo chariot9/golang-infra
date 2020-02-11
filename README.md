@@ -1,6 +1,6 @@
 # Golang-infra
 
-Comprehensive CI/CD flow with Golang, docker, jenkins and Sack integration. (CD flow need to be improved =)))
+Comprehensive CI/CD flow with Golang, docker, jenkins and Slack integration. (CD flow need to be improved =)))
 
 ### Stages
 
